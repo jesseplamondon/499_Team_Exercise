@@ -19,6 +19,10 @@ public class main {
 		System.out.print("}");
 		System.out.println();
 		arraySum(arr);
+		System.out.println();
+		arrayMax(arr);
+		System.out.println();
+		arrayMin(arr);
 
 	}
 	
@@ -38,12 +42,47 @@ public class main {
 		} else {
 			System.out.println("That's incorrect! The sum of the array is: " + total_sum);
 		}
-		
-		in.close();
 	}
 	
-	public static void arrayMax(int[] arr) throws IOException {}
+	public static void arrayMax(int[] arr) throws IOException {
+		Scanner in = new Scanner(System.in);
+		System.out.println("What is the max integer in the array? ");
+		
+		int user_max = in.nextInt();
+		int max_val = arr[0]; 
+		
+	    for(int a = 1; a < arr.length; a++) { 
+	    	if(arr[a] > max_val) { 
+	    		max_val = arr[a]; 
+	    	} 
+	    }
+	    
+	    if(user_max == max_val) {
+			System.out.println("That's correct! The max integer in the array is: " + max_val);
+		} else {
+			System.out.println("That's incorrect! The max integer in the array is: " + max_val);
+		}
+	}
 	
-	public static void arrayMin(int[] arr) throws IOException {}
+	public static void arrayMin(int[] arr) throws IOException {
+		Scanner in = new Scanner(System.in);
+		System.out.println("What is the min integer in the array? ");
+		
+		int user_min = in.nextInt();
+		int min_val = arr[0]; 
+		
+	    for(int a = 1; a < arr.length; a++) { 
+	    	if(arr[a] < min_val) { 
+	    		min_val = arr[a]; 
+	    	} 
+	    }
+	    
+	    if(user_min == min_val) {
+			System.out.println("That's correct! The min integer in the array is: " + min_val);
+		} else {
+			System.out.println("That's incorrect! The min integer in the array is: " + min_val);
+		}
+	    in.close();
+	}
 
 }
