@@ -18,10 +18,13 @@ public class main {
 		}
 		System.out.print("}");
 		System.out.println();
+		
 		arraySum(arr);
 		System.out.println();
+		
 		arrayMax(arr);
 		System.out.println();
+		
 		arrayMin(arr);
 
 	}
