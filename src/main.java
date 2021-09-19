@@ -6,9 +6,15 @@ public class main {
 		int max = 20;
 		int min = 1;
 		int range = max-min+1;
-		for(int e: arr) {
-			e=(int)(Math.random()*range) + min;
+		for(int i = 0; i< arr.length;i++) {
+			arr[i]=(int)(Math.random()*range) + min;
 		}
+		System.out.print("{");
+		for(int e: arr) {
+			System.out.print(e + ", ");
+		}
+		System.out.print("}");
+		System.out.println();
 
 	}
 
