@@ -81,6 +81,7 @@ public class main {
 		else {
 			System.out.println("That's incorrect :( The answer was: " +subsetText);
 		}
+		in.close();
 	}
 
 }
