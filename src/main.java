@@ -1,14 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-import java.io.*;
-import java.util.*;
-=======
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Scanner;
-
 public class main {
 
 	public static void main(String[] args) throws IOException {
@@ -27,6 +19,12 @@ public class main {
 		System.out.print("}");
 		System.out.println();
 		
+		System.out.println(Twosum(arr));
+		System.out.println();
+		
+		greatestSubset(arr);
+		System.out.println();
+		
 		arraySum(arr);
 		System.out.println();
 		
@@ -34,17 +32,12 @@ public class main {
 		System.out.println();
 		
 		arrayMin(arr);
-=======
-		greatestSubset(arr);
-
-		System.out.println(Twosum(arr));
-
 	}
 
 	public static String Twosum(int [] nums){
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("What is the desired sum");
-		int target = scanner.nextInt();
+		Scanner in = new Scanner(System.in);
+		System.out.println("What is the desired sum:");
+		int target = in.nextInt();
 
 		for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
@@ -55,9 +48,10 @@ public class main {
             }
         }
         // In case there is no solution, we'll just return null
-		scanner.close();
+		//in.close();
         return null;
 	}
+	
 	public static void greatestSubset(int[] arr) throws IOException{
 		Scanner in = new Scanner(System.in);
 		System.out.println("What is the greatest subset of three integers in the span of the array? ");
@@ -116,9 +110,10 @@ public class main {
 		else {
 			System.out.println("That's incorrect :( The answer was: " +subsetText);
 		}
-		in.close();
+		//in.close();
 	}
 	
+	// Calculates the sum of the array
 	public static void arraySum(int[] arr) throws IOException {
 		Scanner in = new Scanner(System.in);
 		System.out.println("What is the total sum of integers in the array? ");
@@ -137,6 +132,7 @@ public class main {
 		}
 	}
 	
+	// Finds the max integer in the array
 	public static void arrayMax(int[] arr) throws IOException {
 		Scanner in = new Scanner(System.in);
 		System.out.println("What is the max integer in the array? ");
@@ -157,6 +153,7 @@ public class main {
 		}
 	}
 	
+	// Finds the min integer in the array
 	public static void arrayMin(int[] arr) throws IOException {
 		Scanner in = new Scanner(System.in);
 		System.out.println("What is the min integer in the array? ");
