@@ -32,6 +32,9 @@ public class main {
 		System.out.println();
 		
 		arrayMin(arr);
+		System.out.println();
+
+		findInteger(arr);
 	}
 
 	public static String Twosum(int [] nums){
@@ -171,7 +174,38 @@ public class main {
 		} else {
 			System.out.println("That's incorrect! The min integer in the array is: " + min_val);
 		}
-	    in.close();
+	   // in.close();
 	}
+
+
+	//Asks the user to see if an integer is inside the array. If not, they can ask again.
+	public static void findInteger(int arr[]) throws IOException{
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the integer you wish to find in the array: \n");
+		int userInt = in.nextInt();
+		boolean isFound = false;
+		//Checks if user inputted integer is found in the array.
+		for(int i = 0 ; i < arr.length; i++){
+			if(arr[i] == userInt){
+				System.out.println("Integer found at array index: " + i);
+				isFound = true;
+				break;
+			}
+		}
+		char ans = ' ';
+		//If not found, asks the user again.
+		if(!isFound){
+			System.out.println("That number is not in the array. Would you like to try again? (y/n)");
+			ans = in.next().charAt(0);
+			if(ans == 'y'){
+				findInteger(arr);
+			}
+		}
+
+		in.close();
+	}
+
+
+
 
 }
