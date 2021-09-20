@@ -3,7 +3,6 @@ import java.util.*;
 
 import java.io.*;
 import java.util.*;
-=======
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -34,7 +33,6 @@ public class main {
 		System.out.println();
 		
 		arrayMin(arr);
-=======
 		greatestSubset(arr);
 
 		System.out.println(Twosum(arr));
@@ -49,14 +47,14 @@ public class main {
 		for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[j] == target - nums[i]) {
-                    return i + " " + j; 
+                    return "The integers in the array that make that sum are: {"+nums[i] + ", " + nums[j]+"} and have indices of " + i + ", " + j; 
                 }	
 				
             }
         }
         // In case there is no solution, we'll just return null
 		scanner.close();
-        return null;
+        return "There is no set of two integers in the array that summate to that value";
 	}
 	public static void greatestSubset(int[] arr) throws IOException{
 		Scanner in = new Scanner(System.in);
@@ -116,7 +114,6 @@ public class main {
 		else {
 			System.out.println("That's incorrect :( The answer was: " +subsetText);
 		}
-		in.close();
 	}
 	
 	public static void arraySum(int[] arr) throws IOException {
@@ -175,7 +172,6 @@ public class main {
 		} else {
 			System.out.println("That's incorrect! The min integer in the array is: " + min_val);
 		}
-	    in.close();
 	}
 
 }
