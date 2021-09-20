@@ -1,3 +1,7 @@
+
+import java.io.*;
+import java.util.*;
+=======
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,6 +26,26 @@ public class main {
 		System.out.println();
 		greatestSubset(arr);
 
+		System.out.println(Twosum(arr));
+
+	}
+
+	public static String Twosum(int [] nums){
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("What is the desired sum");
+		int target = scanner.nextInt();
+
+		for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] == target - nums[i]) {
+                    return i + " " + j; 
+                }	
+				
+            }
+        }
+        // In case there is no solution, we'll just return null
+		scanner.close();
+        return null;
 	}
 	public static void greatestSubset(int[] arr) throws IOException{
 		Scanner in = new Scanner(System.in);
