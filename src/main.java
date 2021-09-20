@@ -42,14 +42,13 @@ public class main {
 		for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[j] == target - nums[i]) {
-                    return i + " " + j; 
+                	return "The integers in the array that make that sum are: {"+nums[i] + ", " + nums[j]+"} and have indices of " + i + ", " + j; 
                 }	
 				
             }
         }
-        // In case there is no solution, we'll just return null
-		//in.close();
-        return null;
+        return "There is no set of two integers in the array that summate to that value";
+	
 	}
 	
 	public static void greatestSubset(int[] arr) throws IOException{
