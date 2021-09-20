@@ -4,37 +4,43 @@ import java.util.*;
 public class main {
 
 	public static void main(String[] args) throws IOException {
-		int[] arr = new int[10];
-		int max = 20;
-		int min = 1;
-		int range = max-min+1;
-		for(int i = 0; i< arr.length;i++) {
-			arr[i]=(int)(Math.random()*range) + min;
-		}
-		System.out.println("The questions will be based on the following array: ");
-		System.out.print("{");
-		for(int e: arr) {
-			System.out.print(e + ", ");
-		}
-		System.out.print("}");
-		System.out.println();
-		
-		System.out.println(Twosum(arr));
-		System.out.println();
-		
-		greatestSubset(arr);
-		System.out.println();
-		
-		arraySum(arr);
-		System.out.println();
-		
-		arrayMax(arr);
-		System.out.println();
-		
-		arrayMin(arr);
-		System.out.println();
-
-		findInteger(arr);
+		Scanner in = new Scanner(System.in);
+		do {
+			int[] arr = new int[10];
+			int max = 20;
+			int min = 1;
+			int range = max-min+1;
+			for(int i = 0; i< arr.length;i++) {
+				arr[i]=(int)(Math.random()*range) + min;
+			}
+			System.out.println("The questions will be based on the following array: ");
+			System.out.print("{");
+			for(int e: arr) {
+				System.out.print(e + ", ");
+			}
+			System.out.print("}");
+			System.out.println();
+			
+			System.out.println(Twosum(arr));
+			System.out.println();
+			
+			greatestSubset(arr);
+			System.out.println();
+			
+			arraySum(arr);
+			System.out.println();
+			
+			arrayMax(arr);
+			System.out.println();
+			
+			arrayMin(arr);
+			System.out.println();
+	
+			findInteger(arr);
+			System.out.print("Would you like to test your skills again? Y/N ");
+	}while(!in.next().toUpperCase().equals("N"));
+		System.out.println("Thanks for playing!");
+		in.close();
 	}
 
 	public static String Twosum(int [] nums){
@@ -202,7 +208,6 @@ public class main {
 			}
 		}
 
-		in.close();
 	}
 
 
